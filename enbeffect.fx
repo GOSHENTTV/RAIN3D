@@ -393,7 +393,9 @@ float4 PS_Draw(VS_OUTPUT_POST2 IN, float4 v0 : SV_Position0) : SV_Target
 	r0.xyz = saturate(r0.w * r0.xyz + r2.xyz);
 	res = pow(r0.xyz, Gamma);//1.0/2.2
 
-	return float4(res, IN.txcoord7.x);
+	r0.w = IN.txcoord7.x;
+	Test2.xyz = VehicleVelocity.xyz;
+	return r0;
 }
 
 float4 PS_DrawOriginal(VS_OUTPUT_POST2 IN, float4 v0 : SV_Position0) : SV_Target

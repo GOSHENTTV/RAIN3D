@@ -1110,7 +1110,7 @@ VS_OUTPUT_POSTRD VS_Water_Racing(VS_INPUT_POST IN)
 	OUT.txcoord1.z = (rf || (rd && (ViewInverse3.z < 900.0) && (amount > 0.0)));
 	OUT.txcoord1.w = Timer.x * re * 1000.0;
 	// Get vehicle speed
-	float speed = length(VehicleVelocity.xyz);
+	float speed = length(Test2.xyz);
 	OUT.txcoord1.w += speed * 0.1;
 	return OUT;
 }
